@@ -22,9 +22,6 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    - name: Switch branch
-      run: git checkout -b build
-
     - name: Setup NodeJS
       run: |
         sudo apt install nodejs
@@ -34,15 +31,9 @@ jobs:
     - name: Build the website
       run: brunch build
 
-    - name: Unpack public folder
-      run: |
-        rm -rf app/ brunch-config.js LICENSE node_modules/ package.json package-lock.json README.md tsconfig.json
-        mv public/* .
-        echo File Sctructure:
-        ls -A
-        
-    - name: Push to branch
-      run: |
-        git add -A
-        git commit -m build
-        git push
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: build # The folder the action should deploy.
