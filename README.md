@@ -26,3 +26,9 @@ provide a fun and educational challenge to players.
 - [TypeScript](https://www.typescriptlang.org/)
 - [PixiJS](https://www.pixijs.com/)
 - [Brunch](https://brunch.io/)
+
+## Contributing
+- Please go on [FindCollabs](https://findcollabs.com/project/covid-simulator-2019-mgdsEVPU77Nb7IWb8g7Z)
+- Message me on [slack](https://codevid-19.slack.com), so I may add you to the contributors
+- When pushing to the repository, do not push to master (unless updating README).
+Push to a seperate branch and have your code reviewed. Your code must also pass the CI test.
