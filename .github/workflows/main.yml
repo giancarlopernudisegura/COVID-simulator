@@ -27,7 +27,8 @@ jobs:
         git config --global user.name "${{ secrets.ADMIN_NAME }}"
         git config --global user.email "${{ secrets.ADMIN_EMAIL }}"
         # reset branch
-        git checkout gh-pages
+        git pull
+        git checkout -b gh-pages
         git pull origin gh-pages
         git checkout master
         git checkout -B gh-pages
