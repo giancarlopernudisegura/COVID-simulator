@@ -26,8 +26,8 @@ jobs:
       run: |
         git config --global user.name "${{ secrets.ADMIN_NAME }}"
         git config --global user.email "${{ secrets.ADMIN_EMAIL }}"
-        git checkout -b build
-        git push --set-upstream origin build
+        git checkout -b gh-pages
+        git push --set-upstream origin gh-pages
 
     - name: Setup NodeJS
       run: |
@@ -40,12 +40,10 @@ jobs:
 
     - name: Deploy 🚀
       run: |
-        echo "Unpacking public folder"
         rm -rf app/ brunch-config.js LICENSE node_modules/ package.json package-lock.json README.md tsconfig.json
         mv public/* .
         ls -A
-        
-        echo "Pushing branch"
+      
         git add -A
         git commit -m "build"
         git push
