@@ -28,6 +28,7 @@ jobs:
     - name: Setup NodeJS
       run: |
         sudo apt install nodejs
+        npm install -g brunch
         npm install
 
     - name: Build the website
