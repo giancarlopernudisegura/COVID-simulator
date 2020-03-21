@@ -40,7 +40,7 @@ jobs:
 
     - name: Deploy 🚀
       run: |
-        rm -rf app/ brunch-config.js LICENSE node_modules/ package.json package-lock.json README.md tsconfig.json
+        rm -rf app/ brunch-config.js node_modules/ package.json package-lock.json tsconfig.json
         mv public/* .
         ls -A
       
