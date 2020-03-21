@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "watch": true,
+        "lib": ["dom", "ES2017"],
+        "rootDir": "scripts",
+        "removeComments": true
+    }
+}

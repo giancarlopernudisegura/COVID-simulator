@@ -102,3 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+# JavaScript and CSS (All is being done in TypeScript and SASS
+*.js
+*.css
