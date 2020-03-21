@@ -27,6 +27,7 @@ jobs:
         git config --global user.name "${{ secrets.ADMIN_NAME }}"
         git config --global user.email "${{ secrets.ADMIN_EMAIL }}"
         git checkout -b build
+        git push --set-upstream origin build
 
     - name: Setup NodeJS
       run: |
