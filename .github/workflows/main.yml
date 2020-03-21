@@ -28,9 +28,7 @@ jobs:
         git config --global user.email "${{ secrets.ADMIN_EMAIL }}"
         # reset branch
         git pull
-        git checkout -b gh-pages
-        git pull origin gh-pages
-        git checkout master
+        git push -d origin gh-pages
         git checkout -B gh-pages
         git push --set-upstream origin gh-pages
 
