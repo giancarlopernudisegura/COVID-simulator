@@ -32,3 +32,31 @@ provide a fun and educational challenge to players.
 - Message me on [slack](https://codevid-19.slack.com), so I may add you to the contributors
 - When pushing to the repository, do not push to master (unless updating README).
 Push to a seperate branch and have your code reviewed. Your code must also pass the CI test.
+
+### Installation
+To install, first install Node.js. The latest LTS version should be fine. Then,
+run 
+```console
+npm install -g brunch
+```
+
+You may need sudo priviledges to do so. Afterwards, run
+```console
+npm install
+```
+to install all the dependencies.
+
+### Using brunch
+For this project, you'll only need 2 commands.
+
+To run the server on your local machine, use
+```console
+npm start
+```
+
+To build the server, use
+```console
+npm run-script build
+```
+
+Note: you probably won't need to build it yourself, once in the master branch, a GitHub action will take care of the rest.
