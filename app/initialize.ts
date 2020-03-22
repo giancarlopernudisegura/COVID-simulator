@@ -1,5 +1,5 @@
 import * as PIXI from 'pixi.js';
-import { Model } from './model';
+import { Model } from 'model';
 
 let time = 0;
 let model = new Model(100000000, 0);
@@ -8,7 +8,7 @@ const pixiSettings = {
     resizeTo: window
 }
 
-const app = new PIXI.Application(pixiSettings);
+const app: PIXI.Application = new PIXI.Application(pixiSettings);
 let container: PIXI.DisplayObject;
 
 function init() {
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function update() {
     app.render(container);
-    model.transmissionRate = document.querySelector('#beta').value;
+    model.transmissionRate = document.querySelector('input#beta').value;
     requestAnimationFrame(update);
 }
 
@@ -35,4 +35,3 @@ function calculate() {
     console.log(`Day: ${time}`);
     console.log(model.getCases);
 }
-

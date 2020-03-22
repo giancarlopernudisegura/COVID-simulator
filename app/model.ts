@@ -1,5 +1,7 @@
 export class Model {
     private cases: number;
+    transmissionRate: number;
+    populationSize: number;
 
     constructor(populationSize: number, transmissionRate: number) {
         this.populationSize = populationSize;
