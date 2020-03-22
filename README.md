@@ -40,7 +40,7 @@ run
 npm install -g brunch
 ```
 
-You may need sudo priviledges to do so. Afterwards, run
+You may need sudo privileges to do so. Afterwards, run
 ```console
 npm install
 ```
