@@ -1,6 +1,8 @@
 export class Model {
     private cases: number;
+    historyCases: Array<number>;
     private newCases: number;
+    historyNewCases: Array<number>;
     transmissionRate: number;
     populationSize: number;
 
@@ -8,6 +10,7 @@ export class Model {
         this.populationSize = populationSize;
         this.transmissionRate = transmissionRate;
         this.cases = 1;
+        this.historyCases = [];
         this.newCases = 1;
     }
 
@@ -27,5 +30,6 @@ export class Model {
         let cases = (1 + (this.transmissionRate * this.probability)) * this.cases;
         this.newCases = cases - this.cases;
         this.cases = cases;
+        this.historyCases.push(this.cases);
     }
 }
