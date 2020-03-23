@@ -24,14 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function update() {
     app.render(container);
-    model.transmissionRate = document.querySelector('input#beta').value;
     requestAnimationFrame(update);
 }
 
 // calculates events for 1 day
 function calculate() {
     time++;
+    model.transmissionRate = document.querySelector('input#beta').value;
+    document.querySelector('#day').innerHTML = String(time);
+    document.querySelector('#cases').innerHTML = String(model.getCases);
     model.update();
-    console.log(`Day: ${time}`);
-    console.log(model.getCases);
 }
