@@ -19,6 +19,7 @@ function init() {
 document.addEventListener('DOMContentLoaded', () => {
     init();
     update();
+    calculate();
     setInterval(calculate, 5000);
 });
 
@@ -33,5 +34,6 @@ function calculate() {
     model.transmissionRate = document.querySelector('input#beta').value;
     document.querySelector('#day').innerHTML = String(time);
     document.querySelector('#cases').innerHTML = String(model.getCases);
+    document.querySelector('#newCases').innerHTML = String(model.getNewCases);
     model.update();
 }

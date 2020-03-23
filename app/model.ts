@@ -1,5 +1,6 @@
 export class Model {
     private cases: number;
+    private newCases: number;
     transmissionRate: number;
     populationSize: number;
 
@@ -7,6 +8,7 @@ export class Model {
         this.populationSize = populationSize;
         this.transmissionRate = transmissionRate;
         this.cases = 1;
+        this.newCases = 1;
     }
 
     get probability() {
@@ -17,7 +19,13 @@ export class Model {
         return Math.round(this.cases);
     }
 
+    get getNewCases() {
+        return Math.round(this.newCases);
+    }
+
     update() {
-        this.cases = (1 + (this.transmissionRate * this.probability)) * this.cases;
+        let cases = (1 + (this.transmissionRate * this.probability)) * this.cases;
+        this.newCases = cases - this.cases;
+        this.cases = cases;
     }
 }
