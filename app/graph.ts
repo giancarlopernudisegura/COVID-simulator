@@ -16,7 +16,7 @@ export class Graph {
     render(data: Array<number>) {
         this.init();
         let yTransform = (y) => {
-            return (window.innerHeight / 2) - (y * (window.innerHeight / 2));
+            return (window.innerHeight / 2) - (y * (window.innerHeight / 4));
         };
         let maxVal = Math.max(...data);
         for (let i = 0; i < data.length; i++) {

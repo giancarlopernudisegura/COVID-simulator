@@ -12,6 +12,7 @@ export class Model {
         this.cases = 1;
         this.historyCases = [];
         this.newCases = 1;
+        this.historyNewCases = [];
     }
 
     get probability() {
@@ -31,5 +32,6 @@ export class Model {
         this.newCases = cases - this.cases;
         this.cases = cases;
         this.historyCases.push(this.cases);
+        this.historyNewCases.push(this.newCases);
     }
 }

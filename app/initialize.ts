@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     init();
     update();
     calculate();
+    window.alert("Welcome! COVID Simulator 2019 is be a pandemic simulator where you play as an all powerful government official trying to curve the spread of the virus.");
     setInterval(calculate, 5000);
 });
 
