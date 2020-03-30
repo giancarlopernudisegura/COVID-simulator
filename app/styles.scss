@@ -60,7 +60,26 @@ body {
 
     .speed-controller {
         position: absolute;
-        bottom: 0;
+        bottom: 5px;
+        left: 5px;
+        display: block;
+        padding: 0;
+        background: black;
+        width: 80px;
+        height: 40px;
+        border-radius: 10px;
+        display: flex;
+
+        button, select {
+            width: calc(50% - .5px);
+            background: #0000;
+            color: #fff;
+            border: none;
+        }
+
+        select option {
+            color: initial;
+        }
     }
 }
 
@@ -73,7 +92,14 @@ body {
     }
 }
 
-
 .tab-content {
     display: none;
+}
+
+.vr {
+    width: 1px;
+    height: 90%;
+    background: #fffa;
+    display: block;
+    align-self: center;
 }
