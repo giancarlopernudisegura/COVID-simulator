@@ -13,10 +13,27 @@ function init() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    init();
+    document.querySelector('#default-tab').click();
 });
 
 function update() {
     app.render(container);
     requestAnimationFrame(update);
+}
+
+export function openTab(e: MouseEvent, tab: string) {
+    let tabContents: NodeListOf<any>, tabLinks: NodeListOf<any>;
+
+    tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach((tabContent) => {
+        tabContent.style.display = 'none';
+    });
+
+    tabLinks = document.querySelectorAll('.tab-links');
+    tabLinks.forEach((tabLink) => {
+        tabLink.className = tabLink.className.replace(" visible", "");
+    });
+
+    document.getElementById(tab).style.display = "block";
+    e.currentTarget.className += " visible";
 }
