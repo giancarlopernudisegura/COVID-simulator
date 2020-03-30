@@ -1,4 +1,77 @@
 body {
     margin: 0;
-    overflow: hidden;
+}
+
+.game {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        "toolbar info"
+        "main graphs";
+    grid-template-rows: 384px 1fr;
+    grid-template-columns: 1fr 256px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.toolbar {
+    grid-area: toolbar;
+    background: #000;
+    color: #fff;
+
+    .tabs {
+        width: 100%;
+        background: #fff2;
+    }
+
+    .tab-links {
+        background: #444;
+        color: white;
+        border: none;
+        $radius: 8px;
+        border-start-end-radius: $radius;
+        border-start-start-radius: $radius;
+        margin: 0;
+
+        &.visible {
+            background: #000;
+            border: 1px solid #888;
+            border-bottom: none;
+        }
+    }
+}
+
+.info {
+    grid-area: info;
+    background: #444;
+    color: #fff;
+    padding: 0 1ex;
+}
+
+.main {
+    grid-area: main;
+    background: #888;
+
+    .map {
+        width: 100%;
+    }
+
+    .speed-controller {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+.graphs {
+    grid-area: graphs;
+    background: #ccc;
+
+    .graph {
+        width: 100%;
+    }
+}
+
+
+.tab-content {
+    display: none;
 }

@@ -6,7 +6,61 @@
     <link rel="stylesheet" href="/app.css">
     <script src="/vendor.js"></script>
     <script src="/app.js"></script>
-    <script>require('initialize');</script>
+    <script>const main = require('initialize');</script>
 </head>
 <body>
+    <div class="game">
+        <div class="toolbar">
+            <div class="tabs">
+                <button class="tab-links visible" onclick="main.openTab(event, 'Society')" id="default-tab">Society</button>
+                <button class="tab-links" onclick="main.openTab(event, 'Hospitals')">Hospitals</button>
+                <button class="tab-links" onclick="main.openTab(event, 'Economy')">Economy</button>
+            </div>
+            <div id = "Society" class="tab-content">
+                More to come for $Society...
+            </div>
+            <div id = "Hospitals" class="tab-content">
+                More to come for $Hospitals...
+            </div>
+            <div id = "Economy" class="tab-content">
+                More to come for $Economy...
+            </div>
+        </div>
+        <div class="info">
+            <h2>Information</h2>
+            <p>Total infections:
+                <span>0</span>
+            </p>
+            <p>Total daily infections:
+                <span>0</span>
+            </p>
+            <p>Total deaths:
+                <span>0</span>
+            </p>
+            <p>Total recoveries:
+                <span>0</span>
+            </p>
+        </div>
+        <div class="main">
+            <img src="https://image.shutterstock.com/image-vector/simple-blank-vector-world-map-600w-1543070897.jpg" alt="placeholder map" class="map">
+            <div class="speed-controller">
+                <button>⏯</button>
+                <select name="speed" id="speed-dropdown">
+                    <option value="1">1x</option>
+                    <option value="2">2x</option>
+                    <option value="4">4x</option>
+                </select>
+            </div>
+        </div>
+        <div class="graphs">
+            <div class="total-growth-graph">
+                Total Growth Graph
+                <img src="https://hvidberrrg.github.io/deep_learning/activation_functions/assets/sigmoid_function.png" alt="placeholder graph" class="graph">
+            </div>
+            <div class="daily-growth-graph">
+                Daily Growth Graph
+                <img src="https://hvidberrrg.github.io/deep_learning/activation_functions/assets/sigmoid_derivative.png" alt="placeholder graph" class="graph">
+            </div>
+        </div>
+    </div>
 </body>
