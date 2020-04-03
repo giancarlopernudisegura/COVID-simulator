@@ -68,6 +68,10 @@ body {
     grid-area: graphs;
     background: #ccc;
 
+    h3 {
+        margin: .2rem 1ex;
+    }
+
     .graph {
         width: 100%;
     }
