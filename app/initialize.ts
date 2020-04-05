@@ -1,4 +1,5 @@
 import * as PIXI from 'pixi.js';
+import {Chart} from 'chart';
 
 const pixiSettings = {
     resizeTo: window
@@ -14,6 +15,8 @@ function init() {
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#default-tab').click();
+
+    let c = new Chart('total-growth-chart');
 });
 
 function update() {
